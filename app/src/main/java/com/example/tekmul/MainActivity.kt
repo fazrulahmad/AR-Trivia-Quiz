@@ -20,8 +20,14 @@ class MainActivity : AppCompatActivity() {
     private var score = 0
 
     private val questions = listOf(
-        "Apa ibukota Indonesia?" to listOf("Jakarta", "Bandung"),
-        "Berapakah hasil 2 + 2?" to listOf("4", "5")
+        "Berapakah hasil dari 3x + 2 jika x = 2?" to listOf("8", "10"),
+        "Berapakah nilai dari 20% dari 150?" to listOf("30", "20"),
+        "Hasil dari (5 + 3) × 2 adalah?" to listOf("16", "13"),
+        "Jika f(x) = x², maka f(4) = ?" to listOf("16", "8"),
+        "Berapakah akar kuadrat dari 81?" to listOf("9", "8"),
+        "Sebuah balok memiliki panjang 10 cm, lebar 4 cm, dan tinggi 3 cm. Berapakah volumenya?" to listOf("120 cm³", "140 cm³"),
+        "Berapakah hasil dari penyelesaian x² - 9 = 0?" to listOf("x = 3", "x = ±3"),
+        "Selesaikan SPLDV: 2x + y = 7 dan x - y = 2. Nilai x adalah?" to listOf("x = 2", "x = 3"),
     )
 
     private var currentQuestionIndex = 0
@@ -93,7 +99,7 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun handleAnswer(selectedAnswer: String) {
-        val correctAnswers = listOf("Jakarta", "4")
+        val correctAnswers = listOf("8", "30", "16", "16", "9", "120 cm³", "x = ±3", "3")
         val correct = selectedAnswer == correctAnswers[currentQuestionIndex]
 
         val response = if (correct) {

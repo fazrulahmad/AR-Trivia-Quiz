@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:padding="24dp"
+    android:background="#ffffff">
+
+    <!-- Logo atau ilustrasi quiz -->
+    <ImageView
+        android:id="@+id/logoImage"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:src="@drawable/ic_quiz_logo"
+        android:layout_marginBottom="24dp" />
+
+    <!-- Judul -->
+    <TextView
+        android:id="@+id/tvTitle"
+        android:text="Selamat Datang di AR Quiz"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        android:textColor="#2C2C2C"
+        android:gravity="center"
+        android:layout_marginBottom="8dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <!-- Subjudul -->
+    <TextView
+        android:id="@+id/tvSubtitle"
+        android:text="Uji pengetahuanmu dengan kuis interaktif berbasis AR!"
+        android:textSize="14sp"
+        android:textColor="#6B6B6B"
+        android:gravity="center"
+        android:layout_marginBottom="32dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <!-- Tombol Mulai -->
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnStartQuiz"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Mulai Kuis"
+        android:textSize="16sp"
+        android:textColor="#FFFFFF"
+        app:cornerRadius="12dp"
+        app:icon="@drawable/ic_play_arrow"
+        app:iconPadding="8dp"
+        android:backgroundTint="#3F51B5" />
+
+</LinearLayout>

@@ -67,6 +67,7 @@ dependencies {
     implementation("com.google.ar:core:1.38.0")
     implementation("com.google.ar.sceneform.ux:sceneform-ux:1.15.0")
     implementation("com.google.ar.sceneform:assets:1.15.0")
+    implementation("com.google.android.material:material:1.11.0")
 
     // Pastikan Fragment & ViewModel menggunakan AndroidX
     implementation("androidx.fragment:fragment-ktx:1.6.2")
