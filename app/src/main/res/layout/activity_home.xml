@@ -1,55 +1,232 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:orientation="vertical"
-    android:gravity="center"
-    android:padding="24dp"
-    android:background="#ffffff">
+    android:background="@drawable/home_background">
 
-    <!-- Logo atau ilustrasi quiz -->
-    <ImageView
-        android:id="@+id/logoImage"
-        android:layout_width="150dp"
-        android:layout_height="150dp"
-        android:src="@drawable/ic_quiz_logo"
-        android:layout_marginBottom="24dp" />
-
-    <!-- Judul -->
-    <TextView
-        android:id="@+id/tvTitle"
-        android:text="Selamat Datang di AR Quiz"
-        android:textSize="22sp"
-        android:textStyle="bold"
-        android:textColor="#2C2C2C"
-        android:gravity="center"
-        android:layout_marginBottom="8dp"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
-
-    <!-- Subjudul -->
-    <TextView
-        android:id="@+id/tvSubtitle"
-        android:text="Uji pengetahuanmu dengan kuis interaktif berbasis AR!"
-        android:textSize="14sp"
-        android:textColor="#6B6B6B"
-        android:gravity="center"
-        android:layout_marginBottom="32dp"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
-
-    <!-- Tombol Mulai -->
-    <com.google.android.material.button.MaterialButton
-        android:id="@+id/btnStartQuiz"
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Mulai Kuis"
-        android:textSize="16sp"
-        android:textColor="#FFFFFF"
-        app:cornerRadius="12dp"
-        app:icon="@drawable/ic_play_arrow"
-        app:iconPadding="8dp"
-        android:backgroundTint="#3F51B5" />
+        android:orientation="vertical"
+        android:gravity="center"
+        android:padding="24dp"
+        android:minHeight="600dp">
 
-</LinearLayout>
+        <!-- Top Section with Logo -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:layout_marginTop="40dp"
+            android:layout_marginBottom="32dp">
+
+            <!-- Logo Container -->
+            <LinearLayout
+                android:layout_width="200dp"
+                android:layout_height="200dp"
+                android:background="@drawable/logo_container_bg"
+                android:gravity="center"
+                android:layout_marginBottom="24dp"
+                android:elevation="8dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="🧮📐📊"
+                    android:textSize="48sp"
+                    android:gravity="center"/>
+
+            </LinearLayout>
+
+            <!-- Main Title -->
+            <TextView
+                android:id="@+id/tvTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="AR Quiz Matematika"
+                android:textSize="28sp"
+                android:textStyle="bold"
+                android:textColor="@color/title_color"
+                android:gravity="center"
+                android:layout_marginBottom="8dp"
+                android:fontFamily="sans-serif-medium"/>
+
+            <!-- Subtitle -->
+            <TextView
+                android:id="@+id/tvSubtitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Rasakan pengalaman belajar matematika yang menyenangkan dengan teknologi Augmented Reality!"
+                android:textSize="16sp"
+                android:textColor="@color/subtitle_color"
+                android:gravity="center"
+                android:lineSpacingExtra="4dp"
+                android:layout_marginBottom="40dp"
+                android:paddingHorizontal="16dp"/>
+
+        </LinearLayout>
+
+        <!-- Features Section -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginBottom="32dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Fitur Unggulan:"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:textColor="@color/feature_title_color"
+                android:layout_marginBottom="16dp"
+                android:gravity="center"/>
+
+            <!-- Feature Items -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:padding="12dp"
+                android:background="@drawable/feature_item_bg"
+                android:layout_marginBottom="8dp">
+
+                <TextView
+                    android:layout_width="32dp"
+                    android:layout_height="32dp"
+                    android:text="🎯"
+                    android:textSize="20sp"
+                    android:gravity="center"
+                    android:layout_marginEnd="12dp"/>
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Quiz interaktif dengan soal matematika yang beragam"
+                    android:textSize="14sp"
+                    android:textColor="@color/feature_text_color"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:padding="12dp"
+                android:background="@drawable/feature_item_bg"
+                android:layout_marginBottom="8dp">
+
+                <TextView
+                    android:layout_width="32dp"
+                    android:layout_height="32dp"
+                    android:text="🔊"
+                    android:textSize="20sp"
+                    android:gravity="center"
+                    android:layout_marginEnd="12dp"/>
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Fitur Text-to-Speech untuk pengalaman audio yang menarik"
+                    android:textSize="14sp"
+                    android:textColor="@color/feature_text_color"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:padding="12dp"
+                android:background="@drawable/feature_item_bg"
+                android:layout_marginBottom="8dp">
+
+                <TextView
+                    android:layout_width="32dp"
+                    android:layout_height="32dp"
+                    android:text="📱"
+                    android:textSize="20sp"
+                    android:gravity="center"
+                    android:layout_marginEnd="12dp"/>
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Teknologi AR untuk visualisasi 3D yang memukau"
+                    android:textSize="14sp"
+                    android:textColor="@color/feature_text_color"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <!-- Instructions Section -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@drawable/instruction_card_bg"
+            android:padding="16dp"
+            android:layout_marginBottom="32dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="📋 Cara Bermain:"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:textColor="@color/instruction_title_color"
+                android:layout_marginBottom="12dp"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="1. Tekan tombol 'Mulai Kuis' di bawah ini\n2. Arahkan kamera ke permukaan datar\n3. Ketuk layar untuk memunculkan soal\n4. Pilih jawaban yang tepat\n5. Selesaikan semua soal dan raih skor terbaik!"
+                android:textSize="14sp"
+                android:textColor="@color/instruction_text_color"
+                android:lineSpacingExtra="2dp"/>
+
+        </LinearLayout>
+
+        <!-- Start Button -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center">
+
+            <Button
+                android:id="@+id/btnStartQuiz"
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:text="🚀 Mulai Kuis Sekarang"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:textColor="@android:color/white"
+                android:background="@drawable/start_button_bg"
+                android:elevation="4dp"
+                android:layout_marginBottom="16dp"
+                android:textAllCaps="false"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Siap untuk tantangan matematika?"
+                android:textSize="12sp"
+                android:textColor="@color/subtitle_color"
+                android:textStyle="italic"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</ScrollView>

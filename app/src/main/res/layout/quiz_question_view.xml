@@ -4,26 +4,99 @@
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
     android:orientation="vertical"
-    android:padding="16dp"
-    android:background="@android:color/white">
+    android:padding="20dp"
+    android:background="@drawable/quiz_card_background"
+    android:elevation="8dp"
+    android:minWidth="320dp"
+    android:maxWidth="400dp">
 
-    <TextView
-        android:id="@+id/questionTextView"
-        android:layout_width="wrap_content"
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Question"
-        android:textSize="18sp"
-        android:layout_marginBottom="16dp"/>
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:layout_marginBottom="16dp">
 
-    <Button
-        android:id="@+id/btnAnswer1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Answer 1"/>
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="🧮 Quiz Matematika AR"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:textColor="@color/primary_color"
+            android:gravity="center"/>
 
-    <Button
-        android:id="@+id/btnAnswer2"
-        android:layout_width="wrap_content"
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Answer 2"/>
+        android:orientation="vertical"
+        android:background="@drawable/question_card_bg"
+        android:padding="16dp"
+        android:layout_marginBottom="20dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Pertanyaan:"
+            android:textSize="12sp"
+            android:textColor="@color/label_color"
+            android:layout_marginBottom="8dp"/>
+
+        <TextView
+            android:id="@+id/questionTextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Question"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textColor="@color/question_text_color"
+            android:lineSpacingExtra="2dp"
+            android:gravity="center"
+            android:minHeight="60dp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Pilih jawaban:"
+            android:textSize="12sp"
+            android:textColor="@color/label_color"
+            android:layout_marginBottom="12dp"/>
+
+        <Button
+            android:id="@+id/btnAnswer1"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_marginBottom="8dp"
+            android:text="Answer 1"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:background="@drawable/answer_button_bg"
+            android:textColor="@color/answer_button_text"
+            android:elevation="2dp"
+            android:textAllCaps="false"/>
+
+        <Button
+            android:id="@+id/btnAnswer2"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:text="Answer 2"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:background="@drawable/answer_button_bg"
+            android:textColor="@color/answer_button_text"
+            android:elevation="2dp"
+            android:textAllCaps="false"/>
+
+    </LinearLayout>
+
 </LinearLayout>
